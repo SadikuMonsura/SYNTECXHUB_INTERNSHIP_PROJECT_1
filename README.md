@@ -76,3 +76,47 @@ The dataset includes fields relating to areas such as:
 These fields provided sufficient information to analyze sales performance from multiple business perspectives, including time, product, geography, sales personnel, customer type, payment method, and sales channel.
 
 ### Data Quality Assessment
+
+Before beginning the analysis, the dataset was assessed to determine its overall quality and suitability for analysis.
+
+The data quality assessment showed that:
+
+- There were no duplicate records.
+- There were no null or missing values.
+- The dataset was generally clean and suitable for analysis.
+- No major data-cleaning operations were required.
+
+However, one irrelevant column was identified.
+
+The dataset contained a column that combined Sales Representative and Region information. Since separate columns for Sales Representative and Region were already available, the combined column was redundant.
+
+Therefore, the redundant column was removed to:
+- Reduce unnecessary fields.
+- Avoid duplication of information.
+- Improve the structure of the dataset.
+- Make the data model easier to understand.
+
+## Data Preparation and Transformation
+
+he data preparation process was primarily carried out in Power BI.
+
+The following transformations and modifications were performed.
+
+### Removal of Redundant Column
+
+A column containing combined Sales Representative and Region information was removed because the dataset already contained separate fields for:
+- Sales Representative
+- Region
+
+Keeping both the combined and separate fields would have introduced unnecessary redundancy into the dataset.
+
+### Creation of Sales Column
+During the analysis, it was identified that the original Sales Amount field did not produce a reliable sales value for the analysis.
+
+Therefore, a new Sales/Revenue calculation was created based on the available transactional fields, particularly Unit Price and Quantity Sold.
+
+This allowed the analysis to use a more consistent calculation of sales value rather than relying solely on the original Sales Amount field.
+
+The resulting revenue calculation was used throughout the dashboard to analyze sales performance.
+
+
